@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 10vh;
+}
+header nav {
+  height: 100%;
+  background-color: #84818c;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav ul {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 1rem;
+}
+header nav ul li {
+  margin: 1rem;
+  color: white;
+  font-size: large;
+  font-weight: 900;
+}
+header nav ul li:hover {
+  color: #363146;
+  cursor: pointer;
+  transform: scaleY(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+main .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #424147;
+  font-size: x-large;
+}
+main .input section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .input div label {
+  cursor: pointer;
+}
+main .input div label:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  transition: all 0.4s ease-in-out;
+  color: #84818c;
+}
+main .input div button {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: #3535ec;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 6px;
+}
+main .input div button:hover {
+  background-color: #1e1e9d;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid black;
+}
+main .input div button:active {
+  background-color: #0000ff;
+  border: 2px solid black;
+}
+main .input div .input-item {
+  margin: 10px 6px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  background-color: #424147;
+}
+main .banner .cards {
+  margin: 4px;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+main .banner .cards .card {
+  margin: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .banner .cards .card :nth-child(2) {
+  color: #ff0000;
+}
+main .banner .cards .card .card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: green;
+  font-size: x-large;
+  font-weight: 900;
+}
+main .banner .cards .card :nth-child(1) {
+  color: #379415;
+}
+main .banner .cards img {
+  width: 30vh;
+}
+main .banner .cards img:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  transition: all 0.4s ease-in-out;
+}
+
+footer {
+  height: 5rem;
+  background-color: #84818c;
+}
+footer .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+footer .footer .left {
+  font-size: x-large;
+  color: white;
+}
+footer .footer .left:hover {
+  color: #363146;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+footer .footer .right .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer .right .icons .icon {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+footer .footer .right .icons .icon:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
+  transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 20vh;
+    margin: 6px;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    flex-direction: column;
+  }
+  header nav ul li:hover {
+    cursor: pointer;
+    background-color: #1e1e9d;
+  }
+  header nav ul :nth-child(1) {
+    background-color: #8aa786;
+  }
+  header nav ul :nth-child(2) {
+    background-color: #8aa786;
+  }
+  header nav ul :nth-child(3) {
+    background-color: #8aa786;
+  }
+  main {
+    margin: 10px 0px;
+  }
+  main .input {
+    flex-direction: column;
+  }
+  main .input section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  main .banner .cards {
+    grid-template-columns: 1fr;
+  }
+  main .banner .cards .card {
+    margin-bottom: 4px;
+  }
+  footer {
+    margin-top: 4px;
+  }
+  footer .footer {
+    flex-direction: column;
+  }
+  footer .footer .left {
+    margin-top: 14px;
+    font-size: large;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .input div label {
+    font-size: large;
+  }
+  main .banner .cards .card .card-info {
+    font-size: large;
+  }
+}
+@media screen and (max-width: 300px) {
+  main .input div label {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
